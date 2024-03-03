@@ -13,9 +13,11 @@ data = load_data()
 
 st.title("Bike Sharing Dashboard")
 
-st.sidebar.title("About")
-st.sidebar.info("This dashboard displays visualizations for a Bike Sharing dataset. "
-                "The dataset contains information about bike rentals based on various factors such as season, temperature, humidity, and more.")
+st.sidebar.title("Information")
+st.sidebar.info(
+    "This dashboard displays visualizations for a Bike Sharing dataset. "
+    "The dataset contains information about bike rentals based on various factors such as season, temperature, humidity, and more."
+    )
 
 st.sidebar.subheader("Dataset Exploration")
 if st.sidebar.checkbox("Show Dataset"):
@@ -87,3 +89,8 @@ with col3:
     plt.ylabel("Bike Share Count")
     plt.title("Temperature vs. Bike Share Count")
     st.pyplot(plt)
+
+st.sidebar.title("Created by:")
+st.sidebar.markdown("**Author:** Antonius Yabes Sieman")
+st.sidebar.markdown("**Email:** [yabesanthony@gmail.com](yabesanthony@gmail.com)")
+st.sidebar.markdown("**LinkedIn:** [Antonius Yabes Sieman](https://www.linkedin.com/in/antoniusyabes7/)")
