@@ -31,11 +31,21 @@ if st.sidebar.checkbox("Show Summary Statistics"):
 st.sidebar.subheader("Dataset Source")
 st.sidebar.markdown("[Download Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset)")
 
-st.sidebar.subheader("Weather Situations Legend")
+st.sidebar.subheader("Weather Situations Explanations")
 st.sidebar.markdown('**1:** Clear, Few clouds, Partly cloudy, Partly cloudy')
 st.sidebar.markdown('**2:** Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist')
 st.sidebar.markdown('**3:** Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds')
 st.sidebar.markdown('**4:** Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog')
+
+st.sidebar.subheader("Humidity")
+st.sidebar.markdown('**Info:** Normalized and each divided by 100 (max is 100)')
+
+st.sidebar.subheader("Humidity")
+st.sidebar.markdown('**Info:** Normalized and each divided by 67 (max is 67)')
+
+st.sidebar.subheader("Temperature")
+st.sidebar.markdown('**Info:** temp : Normalized temperature in Celsius. The values are derived via (t-t_min)/(t_max-t_min), t_min=-8, t_max=+39 (only in hourly scale)')
+
 
 st.header("Explore Bike Share Data")
 
@@ -55,7 +65,7 @@ plt.ylabel("Bike Share Count")
 plt.title("Weather Situation-wise Bike Share Count")
 st.pyplot(plt)
 
-st.subheader("Hourly Bike Share Count")
+st.subheader("Hourly Bike Rental Count")
 plt.figure(figsize=(10, 6))
 sns.lineplot(data=data, x="hr", y="cnt")
 plt.xlabel("Hour")
