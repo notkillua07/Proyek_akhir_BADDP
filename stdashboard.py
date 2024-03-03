@@ -73,7 +73,7 @@ plt.ylabel("Bike Rental Count")
 plt.title("Hourly Bike Rental Count")
 st.pyplot(plt)
 
-st.subheader("Scatter Plots")
+st.subheader("More neat Comparisons!")
 col1, col2, col3 = st.columns(3)
 
 with col1:
